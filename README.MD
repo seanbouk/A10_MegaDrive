@@ -2,6 +2,8 @@
 
 A small SGDK project — me trying out the [Sega Genesis Development Kit](https://github.com/Stephane-D/SGDK) and confirming the build runs on real Mega Drive hardware. It does.
 
+**[Play it in your browser →](https://seanbouk.github.io/A10_MegaDrive/)**
+
 ## What it is
 
 A top-down A-10 Warthog flying over a forest, with parallax scrolling between the forest floor and the tree canopy.
