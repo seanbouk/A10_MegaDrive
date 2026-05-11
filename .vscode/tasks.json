@@ -41,6 +41,25 @@
                 "SGDK: build"
             ],
             "problemMatcher": []
+        },
+        {
+            "label": "SGDK: publish rom to docs/",
+            "type": "shell",
+            "command": "${env:GDK}\\bin\\cp.exe",
+            "args": [
+                "out/rom.bin",
+                "docs/rom.bin"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "SGDK: build and publish",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "SGDK: build",
+                "SGDK: publish rom to docs/"
+            ],
+            "problemMatcher": []
         }
     ]
 }
