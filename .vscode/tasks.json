@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "options": {
+        "env": {
+            "PATH": "${env:GDK}\\bin;${env:PATH}"
+        }
+    },
+    "tasks": [
+        {
+            "label": "SGDK: build",
+            "type": "shell",
+            "command": "${env:GDK}\\bin\\make.exe",
+            "args": [
+                "-f",
+                "${env:GDK}\\makefile.gen"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "SGDK: clean",
+            "type": "shell",
+            "command": "${env:GDK}\\bin\\make.exe",
+            "args": [
+                "-f",
+                "${env:GDK}\\makefile.gen",
+                "clean"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "SGDK: clean and build",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "SGDK: clean",
+                "SGDK: build"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}
